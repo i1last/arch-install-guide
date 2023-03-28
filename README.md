@@ -188,12 +188,13 @@ NB!$ # Так то необходимо как-то выключать zswap в 
 
 ## 2.4 Настройка клавиатуры
 ```bash
-Section "InputClass"
-        Identifier "system-keyboard"
-        MatchIsKeyboard "on"
-        Option "XkbLayout" "us,ru"
-        Option "XkbModel" "pc105"
-        Option "XkbOptions" "grp:win_space_toggle"
-        Option "AutoRepeat" "170 40
-EndSection
+1$ sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf # Пишем следующее:
+                                                      | Section "InputClass"
+                                                      |         Identifier "system-keyboard"
+                                                      |         MatchIsKeyboard "on"
+                                                      |         Option "XkbLayout" "us,ru"
+                                                      |         Option "XkbModel" "pc105"
+                                                      |         Option "XkbOptions" "grp:win_space_toggle"
+                                                      |         Option "AutoRepeat" "170 40
+                                                      | EndSection
 ```
