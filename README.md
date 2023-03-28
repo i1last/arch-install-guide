@@ -185,3 +185,15 @@ NB!$ # Так то необходимо как-то выключать zswap в 
 3$ yay -Sy reversal-icon-theme-git papirus-icon-theme catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato
 ```
 Далее в lxapperance выставляем свои темы
+
+## 2.4 Настройка клавиатуры
+```bash
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "us,ru"
+        Option "XkbModel" "pc105"
+        Option "XkbOptions" "grp:win_space_toggle"
+        Option "AutoRepeat" "170 40
+EndSection
+```
