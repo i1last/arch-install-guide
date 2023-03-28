@@ -202,3 +202,4 @@ NB!$ # Так то необходимо как-то выключать zswap в 
 ## 2.5 Настрйоки приложений
 ### 2.5.1 Thunar
 1. Edit --> Configure Custom Actions --> Open Terminal Here --> command --> "alacritty --working-directory %f"
+2. File --> RMC --> Open With --> Set Default Application --> command --> "alacritty -e nvim %f"
