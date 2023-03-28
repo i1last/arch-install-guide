@@ -168,7 +168,8 @@ NB!$ # Так то необходимо как-то выключать zswap в 
                                     | xset r rate 170 40
                                     | setxkbmap -layout us,ru -option grp:win_space_toggle
 
-8$ reboot
+8$ sudo systemctl --user enable pulseaudio
+9$ reboot
 ```
 
 ## 2.2 Восстановление файлов конфигурации
