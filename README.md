@@ -198,3 +198,7 @@ NB!$ # Так то необходимо как-то выключать zswap в 
                                                       |         Option "AutoRepeat" "170 40
                                                       | EndSection
 ```
+
+## 2.5 Настрйоки приложений
+### 2.5.1 Thunar
+1. Edit --> Configure Custom Actions --> Open Terminal Here --> command --> "alacritty --working-directory %f"
