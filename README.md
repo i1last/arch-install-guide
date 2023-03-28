@@ -6,7 +6,7 @@
 ## 1.1 Подключение к интернету
 
 Использовать либо раздачу с мобильного через модем, либо через iwd:
-```
+```bash
 1$ iwctl
 2[iwd]$ device list
 3[iwd]$ station *устройство* scan
@@ -19,7 +19,7 @@
 
 ## 1.2 Время
 
-```
+```bash
 1$ timedatectl set-ntp trur
 2$ timedatectl set-timezone Europe/Moscow
 ```
@@ -27,45 +27,44 @@
 
 ## 1.3 Разметка диска
 
-```
+```bash
 1$ fdisk -l
 2$ cfdisk {GPT disklabel}
 3$ ...
 4$ mkfs.fat -F32 /dev/*efi system*
 5$ mkfs.ext4 /dev/*linux filesystem*
-
 ```
 
 Моя разметка: 
-```
+```bash
 300M - EFI System - FAT32
 Оставшееся - Linux Filesystem - ext4/btrfs
 ```
 
 ## 1.4 Монтирование
-```
+```bash
 1$ mount --mkdir /dev/*efi system* /mnt/efi
 2$ mount /dev/*linux filesystem* /mnt
 ```
 
 ## 1.5 Pacstrap
-```
+```bash
 1$ pacstrap /mnt base linux-zen linux-firmware
 ```
 
 ## 1.6 Генерация Genfstab
-```
+```bash
 1$ genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 ## 1.7 Смена корневого каталога
-```
+```bash
 1$ arch-chroot /mnt
 2$ pacman -S vim dhcpcd
 ```
 
 ## 1.8 Время, локали и хосты
-```
+```bash
 1$ ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 2$ hwclock --systohc
 
@@ -81,7 +80,7 @@
 ```
 
 ## 1.9 Пароль root и создание пользователя
-```
+```bash
 1$ passwd
 
 2$ useradd -m *username*
@@ -91,14 +90,14 @@
 ```
 
 ## 1.10 Эдитор текста по умолчанию, visudo
-```
+```bash
 1$ EDITOR=vim
 2$ pacman -S sudo
 3$ visudo # Раскомментировать строку "%wheel ALL=(ALL) All"
 ```
 
 ## 1.11 Монтирование EFI System, скачивание и настройка GRUB
-```
+```bash
 1$ pacman -S grub efibootmgr dosfstools os-prober mtools
 .$ fdisk -l
 2$ mount --mkdir /dev/*efi system* /boot/EFI
@@ -109,14 +108,14 @@
 ```
 
 ## 1.12 Перезагрузка
-```
+```bash
 1$ exit
 2$ reboot # Когда компьютер будет выключен - вынимаем загрузочную флешку
 3$ sudo systemctl enable dhcpcd
 ```
 
 ## 1.13 Настройки pacman и установка yay
-```
+```bash
 .$ # Подключаемся к интернету удобным способом. Также может понадобиться перезагрузка (`sudo reboot`)
 1$ sudo vim /etc/pacman.conf # Раскомментируем multilib но! не перепутать multilib-testing и multilib
 2$ sudo pacman -Sy pacman-contrib curl sed
@@ -130,7 +129,7 @@
 ```
 
 ## 1.14 Установка zram
-```
+```bash
 NB!$ # Так то необходимо как-то выключать zswap в настройках ядра, но я хз как, поэтому просто ставим как ставим
 
 1$ sudo pacman -S zram-generator
@@ -143,7 +142,7 @@ NB!$ # Так то необходимо как-то выключать zswap в 
 ```
 
 ## 1.15 Прочее
-```
+```bash
 1$ sudo vim /etc/modprobe.d/nobeep.cong # Пишем следующее:
                                           | blacklist pcspkr
 ```
@@ -151,7 +150,7 @@ NB!$ # Так то необходимо как-то выключать zswap в 
 
 # 2. Настройка системы
 ## 2.1 Установка базовых пакетов и первый запуск
-```
+```bash
 1$ sudo pacman -Rsc vim
 
 2$ sudo pacman -S xorg xorg-xinit xorg-server bspwm sxhkd neovim alacritty python python-pip rofi rofi-calc rofi-emoji thunar thunar-volman gvfs firefox pulseaudio pulseaudio-jack pulseaudio-alsa pulseaudio-bluetooth pavucontrol alsa-utils polybar feh dunst brightnessctl networkmanager numlockx neofetch tldr exa ncdu htop
@@ -180,7 +179,7 @@ NB!$ # Так то необходимо как-то выключать zswap в 
     - `scripts/*`
 
 ## 2.3 Устанавливаем остальные пакеты
-```
+```bash
 1$ sudo pacman -S figma-linux-agent figma-linux-bin ttf-jetbrains-mono telegram-desktop discord code zoom zsh yarn npm gulp lxapperance
 2$ betterlockscreen -u ~/.config/bspwm/themes/default/walls/wall-01.png
 3$ yay -Sy reversal-icon-theme-git papirus-icon-theme catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato
