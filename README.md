@@ -154,7 +154,7 @@ NB!$ # Так то необходимо как-то выключать zswap в 
 ```
 1$ sudo pacman -Rsc vim
 
-2$ sudo pacman -S xorg xorg-xinit xorg-server bspwm sxhkd neovim alacritty python python-pip rofi rofi-calc rofi-emoji thunar thunar-volman gvfs firefox pulseaudio pulseaudio-jack pulseaudio-alsa pulseaudio-bluetooth pavucontrol polybar feh dunst brightnessctl networkmanager numlockx neofetch tldr exa ncdu htop
+2$ sudo pacman -S xorg xorg-xinit xorg-server bspwm sxhkd neovim alacritty python python-pip rofi rofi-calc rofi-emoji thunar thunar-volman gvfs firefox pulseaudio pulseaudio-jack pulseaudio-alsa pulseaudio-bluetooth pavucontrol alsa-utils polybar feh dunst brightnessctl networkmanager numlockx neofetch tldr exa ncdu htop
 3$ pip install pyperclip
 4$ yay -S picom-jonaburg-git ly betterlockscreen
 5$ sudo systemctl enable ly
