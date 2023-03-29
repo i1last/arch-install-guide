@@ -6,24 +6,34 @@
 ## 1.1 Подключение к интернету
 
 Использовать либо раздачу с мобильного через модем, либо через iwd:
-```bash
-1$ iwctl
-2[iwd]$ device list
-3[iwd]$ station *устройство* scan
-4[iwd]$ station *устройство* get-netwokrs
-5$ *Ctrl + D*
-6$ iwctl --passphrase *пароль* station *устройство* connect *SSID*
-```
+1. ```bash
+    iwctl
+    ```
+2. ```bash
+    device list
+    ```
+3. ```bash
+    station *устройство* scan
+    ```
+4. ```bash
+    station *устройство* get-netwokrs
+    ```
+5. `*Ctrl + D*`
+6. ```bash
+    iwctl --passphrase *пароль* station *устройство* connect *SSID*
+    ```
 
 > `ping google.com` для проверки сети
-
+---
 ## 1.2 Время
 
-```bash
-1$ timedatectl set-ntp trur
-2$ timedatectl set-timezone Europe/Moscow
-```
-> `timedatectl status` - статус
+1. ```bash
+    timedatectl set-ntp trur
+    ```
+2. ```bash
+    timedatectl set-timezone Europe/Moscow
+    ```
+> `timedatectl status` - проверить статус
 
 ## 1.3 Разметка диска
 
@@ -35,7 +45,7 @@
 5$ mkfs.ext4 /dev/*linux filesystem*
 ```
 
-Моя разметка: 
+Моя разметка:
 ```bash
 300M - EFI System - FAT32
 Оставшееся - Linux Filesystem - ext4/btrfs
