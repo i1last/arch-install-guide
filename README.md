@@ -275,7 +275,7 @@
     ttf-jetbrains-mono telegram-desktop discord code \
     zoom flameshot zsh yarn npm gulp lxapperance aria2 \
     lutris lib32-mesa vulkan-radeon lib32-vulkan-radeon \
-    vulkan-icd-loader lib32-vulkan-icd-loader
+    vulkan-icd-loader lib32-vulkan-icd-loader tk
     ```
 2.  ```bash
     yay -S reversal-icon-theme-git papirus-icon-theme \
