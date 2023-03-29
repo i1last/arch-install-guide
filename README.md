@@ -180,7 +180,7 @@ NB!$ # Так то необходимо как-то выключать zswap в 
 
 ## 2.3 Устанавливаем остальные пакеты
 ```bash
-1$ sudo pacman -S figma-linux-agent figma-linux-bin ttf-jetbrains-mono telegram-desktop discord code zoom flameshot zsh yarn npm gulp lxapperance aria2
+1$ sudo pacman -S figma-linux-agent figma-linux-bin ttf-jetbrains-mono telegram-desktop discord code zoom flameshot zsh yarn npm gulp lxapperance aria2 lutris lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
 2$ betterlockscreen -u ~/.config/bspwm/themes/default/walls/wall-01.png
 3$ yay -Sy reversal-icon-theme-git papirus-icon-theme catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato
 ```
