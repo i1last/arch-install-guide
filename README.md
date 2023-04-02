@@ -275,11 +275,11 @@
     sudo pacman -S figma-linux-agent figma-linux-bin \
     ttf-jetbrains-mono telegram-desktop discord code \
     zoom flameshot zsh yarn npm gulp lxapperance aria2 \
-    lutris tk
+    lutris
     ```
     Зависимости к ним:
     ```bash
-    sudo pacman -S --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon \
+    sudo pacman -S --needed tk lib32-mesa vulkan-radeon lib32-vulkan-radeon \
     vulkan-icd-loader lib32-vulkan-icd-loader wine-staging giflib lib32-giflib \
     libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 \
     openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error \
