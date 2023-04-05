@@ -229,7 +229,7 @@
     thunar-volman gvfs gvfs-mtp firefox pulseaudio pulseaudio-jack \
     pulseaudio-alsa pulseaudio-bluetooth pavucontrol alsa-utils \
     polybar feh dunst brightnessctl networkmanager numlockx \
-    neofetch tldr exa ncdu htop
+    neofetch tldr exa ncdu htop noto-fonts
     ```
 2.  ```bash
     pip install pyperclip
@@ -320,3 +320,8 @@
 ### 2.5.1 Thunar
 1. Edit --> Configure Custom Actions --> Open Terminal Here --> command --> `alacritty --working-directory %f`
 2. File --> RMC --> Open With --> Set Default Application --> command --> `alacritty -e nvim %f`
+### 2.5.2 LxApperance
+- Тема: Catppuccin-Macchiato-Standart-Green-Dark
+- Шрифт: Noto Sans 11
+- Иконки: Reversal-grey
+- Курсор: Catppuccin-Macchiato-Green
