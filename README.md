@@ -320,6 +320,7 @@
 ### 2.5.1 Thunar
 1. Edit --> Configure Custom Actions --> Open Terminal Here --> command --> `alacritty --working-directory %f`
 2. File --> RMC --> Open With --> Set Default Application --> command --> `alacritty -e nvim %f`
+3. Изображение --> открывать по умолчанию --> eog
 ### 2.5.2 LxApperance
 - Тема: Catppuccin-Macchiato-Standart-Green-Dark
 - Шрифт: Noto Sans 11
