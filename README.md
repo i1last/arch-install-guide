@@ -275,7 +275,7 @@
     sudo pacman -S figma-linux-agent figma-linux-bin \
     ttf-jetbrains-mono telegram-desktop discord code \
     zoom flameshot zsh yarn npm gulp lxapperance aria2 \
-    lutris
+    lutris eog
     ```
     Зависимости к ним:
     ```bash
