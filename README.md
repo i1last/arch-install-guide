@@ -287,7 +287,7 @@
     lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama \
     lib32-libgcrypt libgcrypt lib32-libxinerama ncurses lib32-ncurses ocl-icd lib32-ocl-icd \
     libxslt lib32-libxslt libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs \
-    lib32-gst-plugins-base-libs
+    lib32-gst-plugins-base-libs xf86-video-amdgpu
     ```
 2.  ```bash
     yay -S reversal-icon-theme-git papirus-icon-theme \
