@@ -229,7 +229,7 @@
     thunar-volman gvfs gvfs-mtp firefox pulseaudio pulseaudio-jack \
     pulseaudio-alsa pulseaudio-bluetooth pavucontrol alsa-utils \
     polybar feh dunst brightnessctl networkmanager numlockx \
-    neofetch tldr exa ncdu htop fd noto-fonts
+    neofetch tldr exa ncdu htop fd noto-fonts ttf-sazanami
     ```
 2.  ```bash
     pip install pyperclip
