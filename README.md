@@ -199,15 +199,39 @@
     sudo pacman -S zram-generator
     ```
 2.  ```bash
-    sudo nvim /etc/systemd/zram-generator.conf
+    su
+    ```
+3.  ```bash
+    nvim /etc/modules-load.d/zram.conf
     ```
     Пишем следующее:
     ```conf
-    [zram0]
-    zram-size = zram
-    compression-algorithm = zstd
+    zram
     ```
-3.  ```bash
+4.  ```bash
+    nvim /etc/modprobe.d/zram.conf
+    ```
+    Пишем следующее:
+    ```conf
+    options zram num_devices=2
+    ```
+5.  ```bash
+    nvim /etc/udev/rules.d/99-zram.rules
+    ```
+    Пишем следующее:
+    ```conf
+    KERNEL=="zram0", ATTR{disksize}="8192M" RUN="/usr/bin/mkswap /dev/zram0", TAG+="systemd"
+    KERNEL=="zram1", ATTR{disksize}="8192M" RUN="/usr/bin/mkswap /dev/zram1", TAG+="systemd"
+    ```
+6.  ```bash
+    nvim /etc/fstab
+    ```
+    Пишем следующее:
+    ```conf
+    /dev/zram0 none swap defaults 0 0
+    /dev/zram1 none swap defaults 0 0
+    ```
+7.  ```bash
     reboot
     ```
 > Для проверки работы zram - `zramctl`
@@ -315,6 +339,17 @@
             Option "AutoRepeat" "170 40"
     EndSection
     ```
+4.  Настраиваем вывод звука для стриминга discord
+    ```bash
+    pactl load-module module-null-sink sink_name=inputs
+    ```
+    ```bash
+    pactl load-module module-loopback sink=inputs
+    ```
+    ```bash
+    pactl load-module module-loopback sink=inputs
+    ```
+    Далее в pavucontrol --> recording --> all streams выставляем для Loopback to Null Output from свой микрофон и монитор
 ---
 ## 2.5 Настраиваем приложения
 ### 2.5.1 Thunar
