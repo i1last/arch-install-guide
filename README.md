@@ -147,7 +147,7 @@
 3.  ```bash
     nvim /etc/default/grub
     ```
-    Выставляем `GRUB_TIMEOUT=1` и в `GRUB_CMDLINE_LINUX_DEFAULT` добавляем в начало строки `zswap.enabled=0`
+    Выставляем `GRUB_TIMEOUT=1` и в `GRUB_CMDLINE_LINUX_DEFAULT` добавляем в начало строки `zswap.enabled=0`. Если дуалбут с windows, то: `GRUB_DISABLE_OS_PROBER=false`
 4.  ```bash
     grub-install --target=x86_64-efi --bootloader-id="*name*" --recheck
     ```
