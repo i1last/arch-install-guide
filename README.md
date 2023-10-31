@@ -245,7 +245,16 @@
     ```
 ---
 # 2. Настройка системы
-## 2.1 Установка базовых пакетов и первый запуск
+```bash
+# Copy .ssh to home dir
+eval $(ssh-agent -s)
+sudo systemctl enable ly
+sudo systemctl enable NetworkManager.service
+sudo systemctl enable sshd
+sudo chsh /usr/bin/zsh
+git clone git@github.com:i1last/dotfiles.git
+```
+<!--## 2.1 Установка базовых пакетов и первый запуск
 1.  ```bash
     sudo pacman -S xorg xorg-xinit xorg-server bspwm sxhkd  \
     alacritty python python-pip rofi rofi-calc rofi-emoji thunar \
@@ -348,15 +357,16 @@
     ```bash
     pactl load-module module-loopback sink=inputs
     ```
-    Далее в pavucontrol --> recording --> all streams выставляем для Loopback to Null Output from свой микрофон и монитор
+    Далее в pavucontrol -> recording -> all streams выставляем для Loopback to Null Output from свой микрофон и монитор
 ---
 ## 2.5 Настраиваем приложения
 ### 2.5.1 Thunar
-1. Edit --> Configure Custom Actions --> Open Terminal Here --> command --> `alacritty --working-directory %f`
-2. File --> RMC --> Open With --> Set Default Application --> command --> `alacritty -e nvim %f`
-3. Изображение --> открывать по умолчанию --> eog
+1. Edit -> Configure Custom Actions -> Open Terminal Here -> command -> `alacritty --working-directory %f`
+2. File -> RMC -> Open With -> Set Default Application -> command -> `alacritty -e nvim %f`
+3. Изображение -> открывать по умолчанию -> eog
 ### 2.5.2 LxApperance
 - Тема: Catppuccin-Macchiato-Standart-Green-Dark
 - Шрифт: Noto Sans 11
 - Иконки: Reversal-grey
 - Курсор: Catppuccin-Macchiato-Green
+-->
