@@ -251,6 +251,7 @@ eval $(ssh-agent -s)
 sudo systemctl enable ly
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable sshd
+sudo systemctl enable dhcpcd
 sudo chsh /usr/bin/zsh
 git clone git@github.com:i1last/dotfiles.git
 ```
