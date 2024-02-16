@@ -55,7 +55,7 @@
 ---
 ## 1.4 Монтирование
 1.  ```bash
-    mount --mkdir /dev/*efi system* /mnt/efi
+    mount --mkdir /dev/*efi system* /mnt/boot/efi
     ```(для винды монтируем ее главный раздел на ±100мб в ту же папку)
 2.  ```bash
     mount /dev/*linux filesystem* /mnt
@@ -141,7 +141,7 @@
     pacman -S grub efibootmgr dosfstools os-prober mtools
     ```
 2.  ```bash
-    mount --mkdir /dev/*efi system* /boot/EFI
+    mount --mkdir /dev/*efi system* /boot/efi
     ```
     > Вспомнить диск: `fdisk -l`
 3.  ```bash
