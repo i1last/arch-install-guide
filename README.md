@@ -173,7 +173,7 @@
 2. ```bash
     sudo nvim /etc/pacman.conf
     ```
-    Раскомментируем `multilib` (**NB!** Не перепутать `multilib-testing` и `multilib`)
+    Раскомментируем `multilib` (**NB!** Не перепутать `multilib-testing` и `multilib`). Пишем "ILoveCandy" и мультизагрузку на 10
 3.  ```bash
     sudo pacman -Sy --needed pacman-contrib curl sed git base-devel
     ```
