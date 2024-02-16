@@ -56,7 +56,7 @@
 ## 1.4 Монтирование
 1.  ```bash
     mount --mkdir /dev/*efi system* /mnt/efi
-    ```
+    ```(для винды монтируем ее главный раздел на ±100мб в ту же папку)
 2.  ```bash
     mount /dev/*linux filesystem* /mnt
     ```
